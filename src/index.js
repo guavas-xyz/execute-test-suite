@@ -1,4 +1,3 @@
-require("dotenv").config();
 const core = require("@actions/core");
 const axios = require("axios");
 
@@ -25,7 +24,7 @@ async function run() {
   try {
     const apiKey = core.getInput("guava_api_key");
     const checkInterval = 30;
-    const baseUrl = process.env.BASE_URL;
+    const baseUrl = "https://guava-backend.onrender.com";
 
     if (!baseUrl) {
       core.setFailed("Error: BASE_URL environment variable is not set.");
