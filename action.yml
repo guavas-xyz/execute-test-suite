@@ -16,5 +16,5 @@ runs:
   main: 'index.js'
 
 branding:
-  icon: 'check'
-  color: 'blue'
+  icon: 'cloud-lightning'
+  color: 'purple'
