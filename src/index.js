@@ -1,3 +1,4 @@
+require("dotenv").config();
 const core = require("@actions/core");
 const axios = require("axios");
 
@@ -60,7 +61,7 @@ async function run() {
 
     while (status === Status.IN_PROGRESS) {
       const statusResponse = await axios.get(
-        `${baseUrl}/test-suite/execution/status/${id}`,
+        `${baseUrl}/test-suite/execution/list/${id}`,
         {
           headers: {
             Authorization: `Bearer ${apiKey}`,
@@ -71,10 +72,10 @@ async function run() {
       status = mapStatusToEnum(statusResponse.data.status);
       core.info(`Current status: ${status}`);
 
-      if (status === "Complete") {
+      if (status === Status.SUCCESS) {
         core.setOutput("result", "success");
         return;
-      } else if (status === "Failure") {
+      } else if (status === Status.FAILURE) {
         core.setFailed("Job failed.");
         return;
       }
