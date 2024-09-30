@@ -1,0 +1,22 @@
+{
+  "name": "execute-test-suite",
+  "version": "1.0.0",
+  "description": "This Github Action executes a Guava Test Suite. It waits for the return of the tests suite to either be 'Failure' or 'Success'.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guavas-xyz/execute-test-suite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guavas-xyz/execute-test-suite/issues"
+  },
+  "homepage": "https://github.com/guavas-xyz/execute-test-suite#readme",
+  "dependencies": {
+    "@actions/core": "^1.10.1",
+    "@actions/github": "^6.0.0",
+    "axios": "^1.7.7"
+  }
+}

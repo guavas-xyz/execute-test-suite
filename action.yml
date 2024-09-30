@@ -1,0 +1,24 @@
+name: 'Executes your Guava tets'
+description: 'Calls the Guava execute test suite endpoint, retrieves an ID, and monitors the status using Bearer token authentication.'
+author: '@guavas.xyz'
+
+inputs:
+  guava_api_key:
+    description: 'The Guava API Key for Bearer Authorization'
+    required: true
+
+outputs:
+  result:
+    description: 'The result of the API status check'
+
+outputs:
+  result:
+    description: 'The result of the API status check'
+
+runs:
+  using: 'node12'
+  main: 'index.js'
+
+branding:
+  icon: 'check'
+  color: 'blue'
