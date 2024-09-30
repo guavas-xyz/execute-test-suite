@@ -11,10 +11,6 @@ outputs:
   result:
     description: 'The result of the API status check'
 
-outputs:
-  result:
-    description: 'The result of the API status check'
-
 runs:
   using: 'node12'
   main: 'index.js'
