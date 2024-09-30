@@ -1,4 +1,4 @@
-name: 'Executes your Guava tets'
+name: 'Guava: Execute Test Suite'
 description: 'Calls the Guava execute test suite endpoint, retrieves an ID, and monitors the status using Bearer token authentication.'
 author: '@guavas.xyz'
 
