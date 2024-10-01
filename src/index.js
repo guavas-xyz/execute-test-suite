@@ -25,10 +25,6 @@ async function run() {
     const apiKey = core.getInput("guava_api_key");
     const checkInterval = 30;
     const baseUrl = "https://guava-backend.onrender.com";
-    core.info(`Received Base Execution Id: ${process.env["BASE_URL"]}`);
-    core.info(
-      `Received Base Execution Id: ${JSON.stringify(process.env, null, 2)}`
-    );
 
     if (!baseUrl) {
       core.setFailed("Error: BASE_URL environment variable is not set.");
